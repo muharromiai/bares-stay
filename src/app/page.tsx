@@ -1,69 +1,102 @@
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-[#F5F1E8]">
+      {/* NAVBAR */}
+      <nav className="absolute top-0 z-20 w-full px-6 py-6 md:px-16">
+        <div className="mx-auto flex max-w-7xl items-center justify-between">
+          <a
+            href="/"
+            className="text-2xl font-semibold tracking-[0.2em] text-white"
+          >
+            BARÈS
+          </a>
+
+          <div className="hidden items-center gap-10 text-sm text-white md:flex">
+            <a href="/" className="transition hover:text-[#C5AE8B]">
+              Home
+            </a>
+            <a href="/rooms" className="transition hover:text-[#C5AE8B]">
+              Rooms
+            </a>
+            <a href="/gallery" className="transition hover:text-[#C5AE8B]">
+              Gallery
+            </a>
+            <a href="/location" className="transition hover:text-[#C5AE8B]">
+              Location
+            </a>
+          </div>
+
+          <a
+            href="#booking"
+            className="hidden border border-white px-5 py-3 text-xs tracking-widest text-white transition hover:bg-white hover:text-[#243C32] md:block"
+          >
+            BOOK YOUR STAY
+          </a>
+        </div>
+      </nav>
+
+      {/* HERO SECTION */}
+      <section
+        className="relative flex min-h-[700px] items-center bg-cover bg-center px-6 md:min-h-[800px] md:px-16"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=2000&q=85')",
+        }}
+      >
+        {/* DARK OVERLAY */}
+        <div className="absolute inset-0 bg-black/40" />
+
+        {/* HERO CONTENT */}
+        <div className="relative z-10 mx-auto w-full max-w-7xl pt-20">
+          <p className="mb-6 text-xs tracking-[0.35em] text-[#E0CCAA]">
+            YOUR PRIVATE TROPICAL ESCAPE
           </p>
+
+          <h1 className="max-w-3xl text-5xl font-light leading-tight text-white md:text-7xl">
+            Escape to
+            <br />
+            <span className="italic">the beauty</span> of nature.
+          </h1>
+
+          <p className="mt-8 max-w-lg text-sm leading-7 text-white/80 md:text-base">
+            Experience a peaceful tropical retreat where modern comfort
+            meets the beauty of nature.
+          </p>
+
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <a
+              href="#rooms"
+              className="bg-[#F5F1E8] px-8 py-4 text-xs font-medium tracking-widest text-[#243C32] transition hover:bg-[#C5AE8B]"
+            >
+              EXPLORE OUR ROOMS
+            </a>
+
+            <a
+              href="#about"
+              className="border border-white/70 px-8 py-4 text-xs tracking-widest text-white transition hover:bg-white hover:text-[#243C32]"
+            >
+              DISCOVER MORE
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* BOTTOM LABEL */}
+        <div className="absolute bottom-8 right-8 z-10 hidden text-right text-xs tracking-widest text-white/80 md:block">
+          <p>BARÈS — TROPICAL STAY</p>
+          <p className="mt-2">A PLACE TO SLOW DOWN</p>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* TEMPORARY SPACER */}
+      <section className="px-6 py-20 text-center md:px-16">
+        <p className="text-xs tracking-[0.3em] text-[#9A8463]">
+          WELCOME TO BARÈS
+        </p>
+        <h2 className="mt-5 text-3xl font-light text-[#243C32] md:text-5xl">
+          A slower way to experience life.
+        </h2>
+      </section>
+    </main>
   );
 }
