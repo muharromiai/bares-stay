@@ -1,4 +1,5 @@
-
+import Footer from "@/components/Footer";
+import NavbarWrapper from "@/components/NavbarWrapper";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -27,7 +28,11 @@ export default function RootLayout({
       lang="id"
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
-      <body>{children}</body>
+      <body>
+        <NavbarWrapper />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

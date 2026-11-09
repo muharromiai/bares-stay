@@ -1,5 +1,5 @@
-
 import type { Room } from "@/data/rooms";
+import { bookingWhatsApp } from "@/lib/whatsapp";
 
 interface RoomCardProps {
     room: Room;
@@ -29,6 +29,14 @@ export default function RoomCard({ room }: RoomCardProps) {
                 Rp{room.price.toLocaleString("id-ID")}
                 <span className="text-gray-500"> / night</span>
             </p>
+            <a
+                href={bookingWhatsApp(room.name)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-block border border-[#243C32] px-6 py-3 text-xs tracking-widest text-[#243C32] transition hover:bg-[#243C32] hover:text-white"
+                >
+                BOOK THIS ROOM
+            </a>
         </div>
     </article>
   );
