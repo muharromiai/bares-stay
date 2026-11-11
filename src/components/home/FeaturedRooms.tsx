@@ -12,7 +12,7 @@ export default function FeaturedRooms() {
             ACCOMMODATION
           </p>
 
-          <h2 className="mt-4 text-3xl font-light text-[#243C32] md:text-5xl">
+          <h2 className="mt-4 font-serif text-3xl font-light text-[#243C32] md:text-5xl">
             Find your perfect stay.
           </h2>
         </div>

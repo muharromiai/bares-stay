@@ -24,7 +24,7 @@ export default function Hero({
           {eyebrow}
         </p>
 
-        <h1 className="max-w-3xl text-5xl font-light leading-tight text-white md:text-7xl">
+        <h1 className="max-w-3xl font-serif text-5xl font-light leading-tight text-white md:text-7xl">
           Escape to
           <br />
           <span className="italic">the beauty</span> of nature.

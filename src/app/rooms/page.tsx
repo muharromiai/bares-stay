@@ -1,9 +1,9 @@
 import RoomCard from "@/components/rooms/RoomCard";
 import { rooms } from "@/data/rooms";
+import type { Metadata } from "next";
 
 export default function RoomsPage() {
   return (
-    <>
     <main className="min-h-screen bg-[#F5F1E8] px-6 py-20 md:px-16">
       <div className="mx-auto max-w-7xl">
 
@@ -12,7 +12,7 @@ export default function RoomsPage() {
             ACCOMMODATION
           </p>
 
-          <h1 className="mt-4 text-4xl font-light text-[#243C32] md:text-6xl">
+          <h1 className="mt-4 font-serif text-4xl font-light text-[#243C32] md:text-6xl">
             Find Your Stay.
           </h1>
 
@@ -30,6 +30,11 @@ export default function RoomsPage() {
 
       </div>
     </main>
-    </>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Our Rooms",
+  description:
+    "Explore comfortable tropical rooms and private villas at Barès Tropical Stay.",
+};

@@ -1,5 +1,5 @@
-
 "use client";
+import { bookingWhatsApp } from "@/lib/whatsapp";
 
 import Link from "next/link";
 import { useState } from "react";
@@ -19,6 +19,12 @@ export default function Navbar({ variant = "hero" }: NavbarProps) {
   const mobileMenuBackground = isHero
     ? "bg-[#243C32] text-white"
     : "bg-[#F5F1E8] text-[#243C32]";
+
+  const mobileLinkClass = `
+    block px-3 py-3
+    transition-colors duration-150
+    active:bg-[#C5AE8B] active:text-[#243C32]
+  `;
 
   function closeMenu() {
     setIsMenuOpen(false);
@@ -60,7 +66,7 @@ export default function Navbar({ variant = "hero" }: NavbarProps) {
 
         {/* Desktop Booking Button */}
         <Link
-          href="/#booking"
+          href={bookingWhatsApp()}
           className={`hidden border px-5 py-3 text-xs tracking-widest transition hover:bg-[#243C32] hover:text-white md:block ${borderColor} ${textColor}`}
         >
           BOOK YOUR STAY
@@ -86,29 +92,30 @@ export default function Navbar({ variant = "hero" }: NavbarProps) {
           className={`absolute left-0 top-full w-full px-6 py-8 shadow-lg md:hidden ${mobileMenuBackground}`}
         >
           <div className="flex flex-col gap-6 text-sm">
-            <Link href="/" onClick={closeMenu}>
+            <Link href="/" onClick={closeMenu} className={mobileLinkClass}>
               Home
             </Link>
 
-            <Link href="/rooms" onClick={closeMenu}>
+            <Link href="/rooms" onClick={closeMenu} className={mobileLinkClass}>
               Rooms
             </Link>
 
-            <Link href="/gallery" onClick={closeMenu}>
+            <Link href="/gallery" onClick={closeMenu} className={mobileLinkClass}>
               Gallery
             </Link>
 
-            <Link href="/location" onClick={closeMenu}>
+            <Link href="/location" onClick={closeMenu} className={mobileLinkClass}>
               Location
             </Link>
 
             <Link
-              href="/#booking"
+              href={bookingWhatsApp()}
               onClick={closeMenu}
-              className="mt-2 border border-current px-5 py-3 text-center text-xs tracking-widest"
+              className="mt-2 border border-current px-5 py-3 text-center text-xs tracking-widest transition-colors duration-150 active:bg-[#C5AE8B] active:text-[#243C32]"
             >
               BOOK YOUR STAY
             </Link>
+
           </div>
         </div>
       )}

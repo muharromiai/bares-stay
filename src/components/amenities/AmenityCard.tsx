@@ -18,7 +18,7 @@ export default function AmenityCard({
         />
       </div>
 
-      <h3 className="mt-5 text-xl text-[#243C32]">
+      <h3 className="mt-5 font-serif text-xl text-[#243C32]">
         {amenity.name}
       </h3>
 

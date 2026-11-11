@@ -1,4 +1,5 @@
 import GalleryGrid from "@/components/gallery/GalleryGrid";
+import type { Metadata } from "next";
 
 export default function GalleryPage() {
   return (
@@ -8,7 +9,7 @@ export default function GalleryPage() {
           EXPLORE BARÈS
         </p>
 
-        <h1 className="mt-4 text-4xl font-light text-[#243C32] md:text-6xl">
+        <h1 className="mt-4 font-serif text-4xl font-light text-[#243C32] md:text-6xl">
           A Glimpse of Paradise.
         </h1>
 
@@ -22,3 +23,9 @@ export default function GalleryPage() {
     </main>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Gallery",
+  description:
+    "Explore the tropical atmosphere, rooms, and facilities of Barès Tropical Stay.",
+};

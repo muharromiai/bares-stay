@@ -17,7 +17,7 @@ export default function RoomCard({ room }: RoomCardProps) {
         </div>
 
         <div className="pt-5">
-            <h3 className="text-xl text-[#243C32]">
+            <h3 className="font-serif text-xl text-[#243C32]">
                 {room.name}
             </h3>
 

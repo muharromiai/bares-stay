@@ -1,24 +1,38 @@
 import Footer from "@/components/Footer";
 import NavbarWrapper from "@/components/NavbarWrapper";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair-display",
   subsets: ["latin"],
 });
+
 
 export const metadata: Metadata = {
-  title: "Barès | Tropical Stay",
+  title: {
+    default: "Barès | Tropical Stay",
+    template: "%s | Barès",
+  },
   description:
     "Discover a peaceful tropical escape with comfort, nature, and modern hospitality.",
+  applicationName: "Barès",
+  openGraph: {
+    title: "Barès | Tropical Stay",
+    description:
+      "Discover a peaceful tropical escape with comfort, nature, and modern hospitality.",
+    siteName: "Barès",
+    locale: "id_ID",
+    type: "website",
+  },
 };
+
 
 export default function RootLayout({
   children,
@@ -26,7 +40,7 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      className={`${dmSans.variable} ${playfairDisplay.variable} antialiased`}
     >
       <body>
         <NavbarWrapper />

@@ -12,7 +12,7 @@ export default function Amenities() {
             EXPERIENCE
           </p>
 
-          <h2 className="mt-4 text-3xl font-light text-[#243C32] md:text-5xl">
+          <h2 className="mt-4 font-serif text-3xl font-light text-[#243C32] md:text-5xl">
             Designed for your comfort.
           </h2>
         </div>

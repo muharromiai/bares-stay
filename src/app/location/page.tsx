@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 export default function LocationPage() {
   return (
     <main className="min-h-screen bg-[#F5F1E8] px-6 py-20 md:px-16">
@@ -7,7 +8,7 @@ export default function LocationPage() {
           FIND US
         </p>
 
-        <h1 className="mt-4 text-4xl font-light text-[#243C32] md:text-6xl">
+        <h1 className="mt-4 font-serif text-4xl font-light text-[#243C32] md:text-6xl">
           Your Tropical Escape.
         </h1>
 
@@ -34,7 +35,7 @@ export default function LocationPage() {
           </div>
 
           <div className="flex flex-col justify-center">
-            <h2 className="text-2xl text-[#243C32]">
+            <h2 className="font-serif text-2xl text-[#243C32]">
               Visit Barès
             </h2>
 
@@ -74,3 +75,9 @@ export default function LocationPage() {
     </main>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Location",
+  description:
+    "Find Barès Tropical Stay and discover its location and surrounding area.",
+};

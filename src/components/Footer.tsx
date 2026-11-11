@@ -1,3 +1,4 @@
+import { bookingWhatsApp } from "@/lib/whatsapp";
 import Link from "next/link";
 
 export default function Footer() {
@@ -37,7 +38,7 @@ export default function Footer() {
           </p>
 
           <Link
-            href="/#booking"
+            href={bookingWhatsApp()}
             className="mt-4 inline-block border border-[#C5AE8B] px-5 py-3 text-xs tracking-widest transition hover:bg-[#C5AE8B] hover:text-[#243C32]"
           >
             CONTACT US
