@@ -1,8 +1,11 @@
 import Amenities from "@/components/home/Amenities";
+import BookingCTA from "@/components/home/BookingCTA";
+import Experience from "@/components/home/Experience";
 import FeaturedRooms from "@/components/home/FeaturedRooms";
 import GalleryPreview from "@/components/home/GalleryPreview";
 import Hero from "@/components/home/Hero";
 import Introduction from "@/components/home/Introduction";
+import LocationPreview from "@/components/home/LocationPreview";
 
 export default function Home() {
   return (
@@ -15,7 +18,9 @@ export default function Home() {
       <FeaturedRooms />
       <Amenities />
       <GalleryPreview />
-
+      <LocationPreview />
+      <Experience />
+      <BookingCTA />
     </main>
   );
 }
